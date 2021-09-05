@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <style>
+        *{
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: sans-serif;
+            margin-bottom: 13%;
+            background-color: hsl(0, 0%, 90%);
+            background-image: linear-gradient(to bottom, white,hsl(0, 0%, 90%));
+
+        }
+        header {
+            background-color: hsl(220deg 43% 42%);
+            height: 100px;
+        }
+        .max-width {
+            height:11px;
+            margin-left: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .login {
+            display: block;
+            width: 100%;
+            height: auto;
+            align-items: center;
+            margin-top: -30px;
+            margin-left: 60%;
+            
+        }
+        .login input {
+            margin-left: 10px;
+            height: 23px;
+            margin-top: 10px;
+        }
+        .infologin {
+            font-size: 17px;
+            margin-top: 15px;
+            margin-left: 830px;
+            width: 35%;
+            height: 50px;
+            display: inline-block;
+        }
+        .infologin p {
+            padding-left: 50px;
+            display: inline;
+            color: white;
+            font-weight: bold;
+            
+        }
+        .logo {
+            padding-bottom: 20px;
+        }
+        #submit {
+            height:28px;
+            width: 60px;
+            font-size: 16px;
+            background-color: hsl(220deg 43% 42%);
+            color: white;
+            font-weight: bold;
+            border-style: solid;
+            border-width: 1px; 
+            border-color: rgba(0, 0, 0, 0.247);
+            }
+            .tudo {
+                display: flex;
+                justify-content: space-between;
+            }
+            .cadastro {
+                margin-right: 15px;
+            }
+            .cadastro #nome, #sobrenome {
+                height: 30px;
+                width: 245px;
+                font-size: 20px;
+                margin-top: 15px;
+                border-style: solid;
+                border-color: hsl(252deg 11% 91%);
+                padding-left:  7px;
+            }
+            .cadastro #sobrenome {
+                margin-left: 5px;
+                border-style: solid;
+                border-color: hsl(252deg 11% 91%);
+                padding-left:  7px;
+            }
+            .cadastro #email {
+                height: 30px;
+                width: 509px;
+                font-size: 20px;
+                margin-top: 15px;
+                border-style: solid;
+                border-color: hsl(252deg 11% 91%);
+                padding-left:  7px;
+            }
+            .cadastro #senha {
+                height: 30px;
+                width: 509px;
+                font-size: 20px;
+                margin-top: 15px;
+                border-style: solid;
+                border-color: hsl(252deg 11% 91%);
+                padding-left:  7px;
+            }
+            .cadastro .texto-nascimento {
+                margin-top: 19px;
+                margin-bottom: 07px;
+                font-size: 20px;
+                color:hsl(232deg 6% 46%);
+            }
+            .cadastro #dia-nascimento {
+                height: 30px;
+                width: 60px;
+                font-size: 19px;
+                border-style: solid;
+                border-color: hsl(252deg 11% 91%);
+            }
+            .cadastro #mes-nascimento {
+                height: 30px;
+                width: 140px;
+                font-size: 19px;
+                border-style: solid;
+                border-color: hsl(252deg 11% 91%);
+            }
+            .cadastro #ano-nascimento {
+                height: 30px;
+                width: 100px;
+                font-size: 19px;
+                border-style: solid;
+                border-color: hsl(252deg 11% 91%);
+            }
+            .cadastro .porque-nascimento {
+                margin-left: 5px;
+                height: 30px;
+                width: 200px;
+                font-size: 14px;
+                display: inline-block;
+                color:rgb(5, 5, 112);
+            }
+            .cadastro #feminino, #masculino {
+                margin-top: 25px;
+            }
+            .c-feminino, .c-masculino {
+                font-size: 20px;
+                color:hsl(232deg 6% 46%);
+            }
+            .termos {
+                margin-top: 20px;
+                width: 450px;
+                height: 80px;
+                font-size: 15px;
+            }
+            #botao-cadastro {
+                background-color: hsl(106deg 36% 46%);
+                height: 40px;
+                width: 180px;
+                font-size: 20px;
+                color: white;
+                font-weight: bold;
+                border: none;
+                border-radius: 7px;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.281);
+                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.281);
+            }
+            .criar-pagina {
+                margin-top: 25px;
+                color:hsl(232deg 6% 46%);
+                font-weight: bold;
+            }
+            .criar-pagina a {
+                color: hsl(219deg 19% 54%);
+                font-weight: bolder;
+            }
+            .cadastro h1 {
+                font-size: 40px;
+                color: hsl(204deg 10% 20%);
+                font-weight: bold;
+                margin-top: 15px;
+            }
+            .cadastro h2 {
+                color:hsl(232deg 6% 46%);
+                font-size: 18px;
+            }
+            .cadastro input {
+                border-radius: 4px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <dv class="infologin">
+            <p>Email ou telefone</p>
+            <p>Senha</p>
+        </dv>
+        <div class="max-width">
+            <div class="logo"><a href="#"><img src="imagens/logo.png" width="50" height="50"></a></div>
+            <form action="dados.html" method="POST" class="login">
+                <input type="email" id="email" name="email" required>
+                <input type="password" id="senha" name="senha" required>
+                <input type="submit" id="submit" name="submit" value="Entrar">
+                <a href="#" class="esqueci-senha" style="color: rgba(255, 255, 255, 0.582); font-weight: bold; padding-left: 200px;">Esqueceu a conta?</a>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class="tudo">
+        <div class="banner">
+            <img src="imagens/anuncie.png" width="700" height="400">
+        </div>
+        <div class="cadastro">
+            <form>
+                <h1>Abra uma conta</h1>
+                <h2>É gratuito e sempre será.</h2>
+                <input type="text" id="nome" name="nome" placeholder="Nome" required>
+                <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required><br>
+                <input type="email" id="email" name="email" placeholder="Celular ou email" required><br>
+                <input type="password" id="senha" name="senha" placeholder="Nova senha" required><br>
+                <p class="texto-nascimento">Data de Nascimento</p>
+                <select id="dia-nascimento" required>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                </select>
+                <select id="mes-nascimento" required>
+                    <option value="Janeiro">Janeiro</option>
+                    <option value="Fevereiro">Fevereiro</option>
+                    <option value="Março">Março</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Maio">Maio</option>
+                </select>
+                <select id="ano-nascimento" required>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                </select>
+                <a href="#" class="porque-nascimento">Porque preciso informar minha data de nascimento?</a><br>
+                <input type="radio" id="feminino" name="feminino" value="feminino">
+                <label for="feminino" class="c-feminino">Feminino</label>
+                <input type="radio" id="masculino" name="masculino" value="masculino">
+                <label for="feminino" class="c-masculino">Masculino</label><br>
+                <p class="termos">Ao clicar em inscrever-se, você concorda com nossos <a href="#">Termos, Políticas de Dados</a> e <a href="#">Política de Cookies</a>. Você pode receber notificações por SMS e pode cancelar isso quando quiser.</p>
+                <input type="submit" id="botao-cadastro" name="submit" value="Inscreva-se">
+                <p class="criar-pagina"><a href="#">Criar uma Página</a> para uma celebridade, banda, ou empresa.</p>
+            </form>
+        </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

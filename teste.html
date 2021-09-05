@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um Novo Rumo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family:sans-serif;
+        }
+        body {
+            background-image: url(../TESTE/imagens/fundo2.png);
+            background-size: 100%;
+            /*background-color: rgba(255, 255, 255, 0.336);*/
+        }
+        p, h1 {
+            color:rgb(8, 3, 48);
+            margin: 10px 20px;
+        }
+        article p {
+            text-align: justify;
+        }
+        .navbar {
+            background-color: rgb(3, 3, 41);
+            padding: 30px;
+            position: fixed;
+            width: 100%;
+            color: white;
+            z-index: 101;
+        }
+        .max-width {
+            max-width: 1300px;
+            display: flex;
+            align-items: center;
+            z-index: 999;
+            justify-content: space-between;
+            z-index: 102;
+            
+        }
+        .navbar .menu li {
+            display: inline-block;
+            margin-left: 25px;
+        }
+        .navbar .menu li a {
+            font-size: 20px;
+            font-weight: 500;
+            color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .navbar .menu li a:hover {
+            background-color: white;
+            color:rgb(3, 3, 41);
+            border-radius: 7px;
+        }
+        .navbar .menu-btn {
+            display: none;
+            cursor: pointer;
+        }
+        .logo {
+            font-size: 30px;
+            color: white;
+        }
+        .logo a {
+            color: white;
+        }
+        .submenu-home {
+            display: none;
+            /*width: 100px;*/
+        }
+        .especial {
+            display: flex;
+        }
+        .banner1 {
+            margin: 100px 0px;
+            height: 500px;
+            width: 25%;
+            background-color: black;
+            z-index: 100;
+        }
+        article {
+            margin: 100px 5px;
+            width: 50%;
+            background-color: whitesmoke;
+            box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.397);
+        }
+        .banner2 {
+            margin: 100px 0px;
+            height:500px;
+            width: 25%;
+            /*background-color: rgba(22, 4, 88, 0.555);*/
+            text-align: center;
+            padding-right: 100px;
+            z-index: 100;
+        }
+        form {
+            margin: 25%;
+            color: white;
+            font-size: 20px;
+
+        }
+        form input {
+            font-size: 18px;
+            height: 30px;
+            width: 240px;
+        }
+        form label {
+            display: flex;
+            color: rgb(255, 255, 255);
+        }
+        #submit {
+            background-color: rgb(52, 8, 214);
+            color: rgb(255, 255, 255);
+            border-style: none;
+            border-radius: 10px;
+            font-weight: bold;
+            margin-left: 40px;
+            margin-top: 15px;
+            height: 30px;
+            width: 150px;
+            cursor: pointer;
+        }
+        form h1 {
+            font-size: 25px;
+            margin-bottom: 10px;
+            color: rgb(255, 255, 255);
+            width: 150px;
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.459);
+        }
+        footer {
+            background-color: rgb(1, 8, 46);
+            text-align: center;
+            padding-bottom: 50px;
+        }
+        footer p {
+            color:rgb(255, 255, 255);
+            padding-top: 20px;
+            padding-bottom: 0px;
+            margin:0px;
+        }
+        @media (max-width: 747px){
+            /*menu {
+                display: none;
+            }*/
+            .navbar .menu-btn {
+                display: block;
+                z-index: 999;
+            }
+            .menu {
+                background-color: brown;
+                position: fixed;
+                height: 100vh;
+                width: 100%;
+                left: -100%;
+                top: 0;
+                text-align:center;
+                padding-top: 80px;
+                transition: all 0.3s ease;
+            }
+            .navbar .menu.active {
+                left: 0;
+            }
+            .navbar .menu li {
+                display: block;
+            }
+            .navbar .menu li a {
+                display: inline-block;
+                margin: 13px 0px;
+                font-size: 25px;
+            }
+            .banner1, article {
+                display:none;
+            }
+            .banner2 {
+                width: 100%;
+                height: 100%;
+                margin: 13%;
+                text-align: center;
+                align-items: center;
+                /*margin: auto;*/
+                
+            }
+            input {
+                width: 250px;
+                height: 35px;
+                display: flex;
+                margin: auto;
+                margin-left: -30px;
+                font-size: 21px;
+            }
+            #submit {
+                margin: auto;
+                text-align: center;
+                padding-left: 20px;
+                font-size: 20px;
+                height: 40px;
+                width:150px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo">
+                <a href="#">Meu Site</a>
+            </div>
+            <ul class="menu">
+                <li class="sub">
+                    <a href="#">Home</a>
+                    <ul class="submenu-home">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Outro</a></li>
+                        <li><a href="#">Vida</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Investimentos</a></li>
+                <li><a href="#">Portifolio</a></li>
+                <li><a href="#">Nossa Empresa</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="especial">
+            <div class="banner1">
+                <img src="../layout_site/imagens/anuncie.png" width="330" height="500">
+            </div>
+        <article>
+            <h1>Titulo sobre algo</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aspernatur iure suscipit perspiciatis in corrupti, sit consequatur quis? Asperiores quam maiores accusantium explicabo eveniet mollitia repudiandae minima tempore molestias at! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam possimus vero necessitatibus, sint, nostrum enim modi repellendus praesentium cum eos debitis doloremque eius ex sed, officiis cupiditate commodi esse error? Lorem ipsum, dolor sit ameandae vel deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quidem harum quos totam asperiores vel, atque repellendus blanditiis, perspiciatis, architecto molestias natus molestiae consequatur numquam excepturi consequuntur perferendis quisquam cum!</p>
+            <h1>O que acontece?</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aspernatur iure suscipit perspiciatis in corrupti, sit consequatur quis? Asperiores quam maiores accusantium explicabo eveniet mollitia repudiandae minima tempore molestias at! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam possimus vero necessitatibus, sint, nostrum enim modi repellendus praesentium cum eos debitis doloremque eius ex sed, officiis cupiditate commodi esse error? Lorem ipsum, dolor culpa repellat minima excepturi id veritatis reprehenderit asperiores commodi. Facilis impedit quaerat sit! Sit rem ipsa recusandae vel deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quidem harum quos totam asperiores vel, atque repellendus blanditiis, perspiciatis, architecto molestias natus molestiae consequatur numquam excepturi consequuntur perferendis quisquam cum!</p>
+            <h1>Titulo sobre algo</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aspernatur iure suscipit perspiciatis in corrupti, sit consequatur quis? Asperiores quam maiores accusantium explicabo eveniet mollitia repudiandae minima tempore molestias at! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam possimus vero necessitatibus, sint, nostrum enim modi repellendus praesentium cum eos debitis doloremque eius ex sed, officiis cupiditate commodi esse error? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi in enim ducimus aspernatur minus accusantium aliquam odio reiciendis quod explicabo aliquid, voluptatum doloremque ullam, voluptate illum sint magni expedita eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio omnis laborum culpa repellat minima excepturi id veritatis reprehenderit asperiores commodi. Facilis impedit quaerat sit! Sit rem ipsa recusandae vel deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quidem harum quos totam asperiores vel, atque repellendus blanditiis, perspiciatis, architecto molestias natus molestiae consequatur numquam excepturi consequuntur perferendis quisquam cum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aspernatur iure suscipit perspiciatis in corrupti, sit consequatur quis? Asperiores quam maiores accusantium explicabo eveniet mollitia repudiandae minima tempore molestias at! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam possimus vero necessitatibus, sint, nostrum enim modi repellendus praesentium cum eos debitis doloremque eius ex sed, officiis cupiditate commodi esse error? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi in enim ducimus aspernatur minus accusantium aliquam odio reiciendis quod explicabo aliquid, voluptatum doloremque ullam, voluptate illum sint magni expedita eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio omnis laborum culpa repellat minima excepturi id veritatis reprehenderit asperiores commodi. Facilis impedit quaerat sit! Sit rem ipsa recusandae vel deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quidem harum quos totam asperiores vel, atque repellendus blanditiis, perspiciatis, architecto molestias natus molestiae consequatur numquam excepturi consequuntur perferendis quisquam cum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aspernatur iure suscipit perspiciatis in corrupti, sit consequatur quis? Asperiores quam maiores accusantium explicabo eveniet mollitia repudiandae minima tempore molestias at! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam possimus vero necessitatibus, sint, nostrum enim modi repellendus praesentium cum eos debitis doloremque eius ex sed, officiis cupiditate commodi esse error? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi in enim ducimus aspernatur minus accusantium aliquam odio reiciendis quod explicabo aliquid, voluptatum doloremque ullam, voluptate illum sint magni expedita eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio omnis laborum culpa repellat minima excepturi id veritatis reprehenderit asperiores commodi. Facilis impedit quaerat sit! Sit rem ipsa recusandae vel deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quidem harum quos totam asperiores vel, atque repellendus blanditiis, perspiciatis, architecto molestias natus molestiae consequatur numquam excepturi consequuntur perferendis quisquam cum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aspernatur iure suscipit perspiciatis in corrupti, sit consequatur quis? Asperiores quam maiores accusantium explicabo eveniet mollitia repudiandae minima tempore molestias at! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam possimus vero necessitatibus, sint, nostrum enim modi repellendus praesentium cum eos debitis doloremque eius ex sed, officiis cupiditate commodi esse error? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi in enim ducimus aspernatur minus accusantium aliquam odio reiciendis quod explicabo aliquid, voluptatum doloremque ullam, voluptate illum sint magni expedita eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio omnis laborum culpa repellat minima excepturi id veritatis reprehenderit asperiores commodi. Facilis impedit quaerat sit! Sit rem ipsa recusandae vel deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quidem harum quos totam asperiores vel, atque repellendus blanditiis, perspiciatis, architecto molestias natus molestiae consequatur numquam excepturi consequuntur perferendis quisquam cum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aspernatur iure suscipit perspiciatis in corrupti, sit consequatur quis? Asperiores quam maiores accusantium explicabo eveniet mollitia repudiandae minima tempore molestias at! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam possimus vero necessitatibus, sint, nostrum enim modi repellendus praesentium cum eos debitis doloremque eius ex sed, officiis cupiditate commodi esse error? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi in enim ducimus aspernatur minus accusantium aliquam odio reiciendis quod explicabo aliquid, voluptatum doloremque ullam, voluptate illum sint magni expedita eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio omnis laborum culpa repellat minima excepturi id veritatis reprehenderit asperiores commodi. Facilis impedit quaerat sit! Sit rem ipsa recusandae vel deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quidem harum quos totam asperiores vel, atque repellendus blanditiis, perspiciatis, architecto molestias natus molestiae consequatur numquam excepturi consequuntur perferendis quisquam cum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aspernatur iure suscipit perspiciatis in corrupti, sit consequatur quis? Asperiores quam maiores accusantium explicabo eveniet mollitia repudiandae minima tempore molestias at! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam possimus vero necessitatibus, sint, nostrum enim modi repellendus praesentium cum eos debitis doloremque eius ex sed, officiis cupiditate commodi esse error? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi in enim ducimus aspernatur minus accusantium aliquam odio reiciendis quod explicabo aliquid, voluptatum doloremque ullam, voluptate illum sint magni expedita eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio omnis laborum culpa repellat minima excepturi id veritatis reprehenderit asperiores commodi. Facilis impedit quaerat sit! Sit rem ipsa recusandae vel deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quidem harum quos totam asperiores vel, atque repellendus blanditiis, perspiciatis, architecto molestias natus molestiae consequatur numquam excepturi consequuntur perferendis quisquam cum!</p>
+        </article>
+        <div class="banner2">
+            <!--<img src="../TESTE/imagens/imagem01.png" width="330" height="500">-->
+            <form>
+                <h1>Cadastre-se!</h1>
+                <label for="name">Nome:</label>
+                <input type="text" name="nome" id="nome"><br>
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" id="sobrenome"><br>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email"><br>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha"><br>
+                <input type="submit" name="submit" id="submit" value="Cadastre-se">
+            </form>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <p>Todos os direitos reservados &copy; 2018 - 2021</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
